@@ -1,0 +1,22 @@
+{
+  "name": "hardhat-project",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "docgen": "hardhat docgen",
+    "deploy:dev_goerli": "NODE_ENV=dev npx hardhat run --network goerli",
+    "deploy:dev_polygon": "NODE_ENV=dev npx hardhat run --network mumbai"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@openzeppelin/contracts": "^4.9.3",
+    "@openzeppelin/hardhat-upgrades": "^2.3.1",
+    "chai": "^4.3.10",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.7.1",
+    "hardhat": "^2.17.1",
+    "hardhat-contract-sizer": "^2.10.0",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.5"
+  }
+}
