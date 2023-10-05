@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity 0.8.7;
+pragma solidity ^0.8.7;
 pragma abicoder v2;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
@@ -63,7 +63,7 @@ contract LockonSourceContract is Ownable {
     constructor(
         address _dstContractAddress,
         address _uniswapRouterAddress,
-        address _USDC,
+        address _USDC
     ) {
         stargateBridge = IStargateBridge(_stargateBridge);
         stargateRouter = IStargateRouter(_stargateRouter);
@@ -144,6 +144,7 @@ contract LockonSourceContract is Ownable {
     }
 
     function refundETH() internal payable override {
-        if (address(this).balance > 0) TransferHelper.safeTransferETH(msg.sender, address(this).balance);
+        if (address(this).balance > 0)
+            TransferHelper.safeTransferETH(msg.sender, address(this).balance);
     }
 }

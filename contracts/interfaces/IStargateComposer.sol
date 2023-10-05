@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
+import "./IStargateRouter.sol";
 
-pragma solidity 0.8.7;
+pragma solidity ^0.8.7;
 
 interface IStargateComposer {
     function swap(
