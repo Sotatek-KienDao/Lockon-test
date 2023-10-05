@@ -48,7 +48,7 @@ const config: any = {
     currency: "USD",
   },
   etherscan: {
-    apiKey: polygonApiKey,
+    apiKey: ethereumApiKey,
   },
   mocha: {
     timeout: 50000,

@@ -2,10 +2,11 @@ import { ethers, network, run } from "hardhat";
 import { getContracts, saveContract } from "./utils";
 
 async function main() {
+  const contract = getContracts(network.name)[network.name];
   const StargateComposer = await ethers.deployContract("StargateComposer", [
-    "0x629B57D89b1739eE1C0c0fD9eab426306e11cF42",
-    "0x817436a076060D158204d955E5403b6Ed0A5fac0",
-    "0x0000000000000000000000000000000000000000",
+    contract.stargateBridge,
+    contract.stargateRouter,
+    contract.SGETH,
     13,
   ]);
 
@@ -17,11 +18,11 @@ async function main() {
   );
 
   await run("verify:verify", {
-    address: "0x7E94cB20Cd432Abe1d7EBf949C6f94c47D404615",
+    address: StargateComposer.target,
     constructorArguments: [
-      "0x629B57D89b1739eE1C0c0fD9eab426306e11cF42",
-      "0x817436a076060D158204d955E5403b6Ed0A5fac0",
-      "0x0000000000000000000000000000000000000000",
+      contract.stargateBridge,
+      contract.stargateRouter,
+      contract.SGETH,
       13,
     ],
   });

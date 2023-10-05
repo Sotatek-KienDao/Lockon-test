@@ -1,5 +1,8 @@
 {
     "goerli": {
-        "stargateComposer": "0x01825a4b89a3131c20818875d6fb1B23d74dB57a"
+        "stargateComposer": "0xeFAD7CeCf033a32D2057D089bC44c7dB3e123C79",
+        "stargateBridge": "0xd43cbCC7642C1Df8e986255228174C2cca58d65b",
+        "stargateRouter": "0x7612aE2a34E5A363E137De748801FB4c86499152",
+        "SGETH": "0xCf1F9cD3789Fc6296f4abB11dc460067Ae1a2673"
     }
 }
